@@ -9,11 +9,11 @@ RUN cd /usr/local/bin \
     && ln -s python3.8 python3
 
 # Set pip source
-RUN mkdir /root/.pip \
-    && echo "[global]" > /root/.pip/pip.conf \
-    && echo "index-url=https://mirrors.aliyun.com/pypi/simple" >> /root/.pip/pip.conf \
-    && echo "trusted-host=mirrors.aliyun.com" >> /root/.pip/pip.conf \
-    && echo "timeout=120" >> /root/.pip/pip.conf
+# RUN mkdir /root/.pip \
+#     && echo "[global]" > /root/.pip/pip.conf \
+#     && echo "index-url=https://mirrors.aliyun.com/pypi/simple" >> /root/.pip/pip.conf \
+#     && echo "trusted-host=mirrors.aliyun.com" >> /root/.pip/pip.conf \
+#     && echo "timeout=120" >> /root/.pip/pip.conf
 
 # Install pip package(build)
 RUN pip3.8 install pyyaml  \
